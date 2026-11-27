@@ -1,0 +1,95 @@
+:root {
+  --zemin: #f6f7f9;
+  --kart: #ffffff;
+  --metin: #1d2330;
+  --soluk: #5d6677;
+  --cizgi: #dfe3ea;
+  --vurgu: #1f5fbf;
+  --vurgu-acik: #e8f0fc;
+  --iyi: #1d7a46;
+  --uyari: #a35d00;
+  --uyari-acik: #fff4e0;
+  --kotu: #b3261e;
+  --kotu-acik: #fde9e7;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 14px;
+  background: var(--zemin);
+  color: var(--metin);
+}
+a { color: var(--vurgu); text-decoration: none; }
+a:hover { text-decoration: underline; }
+header.ust {
+  background: var(--kart);
+  border-bottom: 1px solid var(--cizgi);
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  min-height: 52px;
+}
+header.ust .logo { font-weight: 700; margin-right: 8px; }
+header.ust nav { display: flex; gap: 14px; flex-wrap: wrap; flex: 1; }
+header.ust nav a { color: var(--metin); padding: 4px 0; }
+header.ust .kim { color: var(--soluk); font-size: 13px; }
+main { max-width: 1200px; margin: 0 auto; padding: 20px 16px 48px; }
+h1 { font-size: 22px; margin: 0 0 16px; }
+h2 { font-size: 17px; margin: 24px 0 10px; }
+.kutu { background: var(--kart); border: 1px solid var(--cizgi); border-radius: 8px; padding: 16px; margin-bottom: 16px; }
+.satir { display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-end; }
+.izgara { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--soluk); }
+input, select, textarea {
+  font: inherit;
+  padding: 7px 9px;
+  border: 1px solid var(--cizgi);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--metin);
+  min-width: 0;
+}
+input:focus, select:focus, textarea:focus { outline: 2px solid var(--vurgu-acik); border-color: var(--vurgu); }
+button, .buton {
+  font: inherit;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--vurgu);
+  background: var(--vurgu);
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+}
+button.ikincil, .buton.ikincil { background: #fff; color: var(--vurgu); }
+button.tehlike { background: #fff; color: var(--kotu); border-color: var(--kotu); }
+button:disabled { opacity: 0.5; cursor: default; }
+.buton:hover { text-decoration: none; }
+.tablo-kap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: var(--kart); }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--cizgi); vertical-align: top; }
+th { font-size: 12px; color: var(--soluk); font-weight: 600; background: #fafbfc; white-space: nowrap; }
+td.sayi, th.sayi { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+tr.iptal td { color: var(--soluk); text-decoration: line-through; }
+tr.secili td { background: var(--vurgu-acik); }
+.bildirim { padding: 10px 14px; border-radius: 6px; margin-bottom: 16px; }
+.bildirim.hata { background: var(--kotu-acik); color: var(--kotu); }
+.bildirim.mesaj { background: #e6f4ec; color: var(--iyi); }
+.bildirim.uyari { background: var(--uyari-acik); color: var(--uyari); }
+.rozet { display: inline-block; padding: 1px 7px; border-radius: 10px; font-size: 12px; background: #eef0f4; color: var(--soluk); }
+.rozet.kotu { background: var(--kotu-acik); color: var(--kotu); }
+.rozet.uyari { background: var(--uyari-acik); color: var(--uyari); }
+.rozet.iyi { background: #e6f4ec; color: var(--iyi); }
+.soluk { color: var(--soluk); }
+.eksi { color: var(--kotu); }
+.ozet { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; margin-bottom: 16px; }
+.ozet div { background: var(--kart); border: 1px solid var(--cizgi); border-radius: 8px; padding: 12px; }
+.ozet b { display: block; font-size: 18px; margin-top: 4px; font-variant-numeric: tabular-nums; }
+.giris { max-width: 360px; margin: 80px auto; }
+details summary { cursor: pointer; color: var(--vurgu); margin-bottom: 8px; }
+.cubuk { height: 6px; background: #eef0f4; border-radius: 3px; overflow: hidden; margin-top: 4px; }
+.cubuk span { display: block; height: 100%; background: var(--vurgu); }
+.cubuk span.kotu { background: var(--kotu); }
+.cubuk span.uyari { background: var(--uyari); }
